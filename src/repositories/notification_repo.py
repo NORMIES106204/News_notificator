@@ -1,5 +1,10 @@
 #here lies the notification repository which main purpose is to store the notifications in a list and provide methods to add, remove, and retrieve new from PostgreSQL
 #data stored here will be structured as a list of Notification objects, which will be defined in the models/notification.py file
+# Responsible for: READ-ONLY access to the processed notifications table.
+# Supports watermark-based polling (fetch rows newer than a cursor) so this
+# layer never re-scans the whole table. Must never write to this table —
+# it is owned by the upstream processing layer.
+
 
 from datetime import datetime
 from typing import List

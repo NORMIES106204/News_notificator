@@ -1,3 +1,8 @@
+# Responsible for: the immutable content of a single notification
+# (title, description, impact, link, published_at, source).
+# Frozen by design — this model represents "what to say," never
+# "delivery status." Delivery lifecycle belongs in delivery.py instead.
+
 from dataclasses import dataclass
 from datetime import datetime
 

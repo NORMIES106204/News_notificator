@@ -1,0 +1,5 @@
+-- Responsible for: DDL owned by this layer only.
+-- Defines notification_deliveries (delivery state/audit trail) and any
+-- other tables this module needs locally. Must NOT define or alter tables
+-- owned by upstream layers (articles, clustering tables, notifications
+-- source table) — this layer only reads those, never migrates them.
