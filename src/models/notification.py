@@ -13,6 +13,8 @@ class Notification:
     Structured information used to generate a user notification
     from a news article/event.
     """
+    id: str
+    """The unique identifier of the notification."""
 
     title: str
     """The title of the notification."""
@@ -21,14 +23,16 @@ class Notification:
     """The description of the notification."""
 
     impact: str
-    """The impact of the new"""
+    """The impact of the news article/event."""
 
     link: str
     """The link to the news article/event."""
 
-    pulished_at: datetime
+    published_at: datetime
     """The timestamp of the news article/event."""
 
     source: str | None = None
     """The source of the news article/event."""
 
+    cluster_article_count: int | None = None
+    """The number of articles in the cluster, if applicable."""
