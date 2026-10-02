@@ -1,21 +1,19 @@
 services:
   notificator:
-    context: .
-    dockerfile: Dockerfile
+    build: 
+      context: .
+      dockerfile: Dockerfile
 
-  container_name: notificator
+    container_name: notificator
 
-  build:
-    command: python src/news_notificator/main.py
+  
+    restart: no
 
-
-  restart: unless-stopped
-
-  env_file:
+    env_file:
       - .env
 
-  networks:
-    - backend
+    networks:
+      - backend
 
 networks:
   backend:
