@@ -16,3 +16,4 @@ COPY src/ ./src
 COPY config/ ./config
 COPY tests/ ./tests
 CMD ["python", "-m", "src.news_notificator.main"]
+

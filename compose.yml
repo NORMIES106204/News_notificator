@@ -5,6 +5,10 @@ services:
 
   container_name: notificator
 
+  build:
+    command: python src/news_notificator/main.py
+
+
   restart: unless-stopped
 
   env_file:
@@ -17,3 +21,5 @@ networks:
   backend:
     external: true
     
+
+  
