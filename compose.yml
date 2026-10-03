@@ -1,13 +1,12 @@
 services:
   notificator:
-    build: 
+    build:
       context: .
       dockerfile: Dockerfile
 
     container_name: notificator
 
-  
-    restart: no
+    restart: "no"
 
     env_file:
       - .env
@@ -18,6 +17,3 @@ services:
 networks:
   backend:
     external: true
-    
-
-  
